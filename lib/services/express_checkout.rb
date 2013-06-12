@@ -16,6 +16,7 @@ class RailsPaypal::ExpressCheckout < RailsPaypal
     params["PAYMENTREQUEST_0_AMT"] = total.to_s
   end
   def set(action = 'Sale')
+    self.params["PAYMENTREQUEST_0_CURRENCYCODE"] = "EUR"
     self.params["PAYMENTREQUEST_0_PAYMENTACTION"] = action
     self.params["METHOD"] = 'SetExpressCheckout'
     response = self.class.call(self.params) 
