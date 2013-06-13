@@ -2,7 +2,11 @@ require 'httparty'
 require 'rails-paypal/nvp-parser'
 class RailsPaypal
   include HTTParty
-  base_uri "https://api-3t.sandbox.paypal.com/nvp"
+  if Rails.env == "development"
+    base_uri "https://api-3t.sandbox.paypal.com/nvp"
+  else
+    base_uri "https://api-3t.paypal.com/nvp"
+  end
   # custom parser must be signed before set the format
   parser NvpParsingIncluded
   # the response format
