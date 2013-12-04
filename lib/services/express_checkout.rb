@@ -47,11 +47,12 @@ class RailsPaypalGem::ExpressCheckout < RailsPaypalGem
     call({"TOKEN" => token, "METHOD" => "GetExpressCheckoutDetails"})
   end
 
-  def self.do(token, payer_id, amount)
+  def self.do(token, payer_id, amount, currency)
     ret = call({
                    "TOKEN"=>token,
                    "PAYERID"=>payer_id,
                    "AMT" =>amount,
+                   "CURRENCY" => currency,
                    "PAYMENTACTION"=>'Sale',
                    "METHOD"=>"DoExpressCheckoutPayment" })
     if ret["PAYMENTSTATUS"] == 'Completed'
