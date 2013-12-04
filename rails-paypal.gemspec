@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
 require File.expand_path("../lib/rails-paypal/version", __FILE__)
 Gem::Specification.new do |s|
-  s.name        = 'rails-paypal'
+  s.name        = 'rails-paypal-gem'
   s.version     =  RailsPaypal::VERSION
   s.date        = '2013-06-11'
   
   s.summary     = "Paypal for rails"
-  s.description = "A simple paypal client for rails lovers and paypal haters!"
-  s.author      = "Alicia Tang"
-  s.email       = 'alicia.x.tang@gmail.com'
+  s.description = "A simple paypal client for rails lovers and paypal haters! (forked from Alicia Tang"
+  s.author      = "Jan Jezek"
+  s.email       = 'mail@mediatainment-productions.com'
   s.license     = 'MIT'
   
 
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{lib}/**/*.rb", "bin/*", "LICENSE", "*.md"]
 
   s.homepage    =
-    'https://github.com/aliciatang/rails-paypal'
+    'https://github.com/mediatainment/rails-paypal'
 
   s.extra_rdoc_files = ['README.md']
   
