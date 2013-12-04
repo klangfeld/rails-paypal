@@ -17,7 +17,7 @@ class RailsPaypalGem::ExpressCheckout < RailsPaypalGem
     params["PAYMENTREQUEST_0_AMT"] = total.to_s
   end
 
-  def set(action = 'Sale', currency = 'USD')
+  def set(action = 'Sale', currency = 'EUR')
     self.params["PAYMENTREQUEST_0_CURRENCYCODE"] = currency
     self.params["PAYMENTREQUEST_0_PAYMENTACTION"] = action
     self.params["METHOD"] = 'SetExpressCheckout'
@@ -47,7 +47,7 @@ class RailsPaypalGem::ExpressCheckout < RailsPaypalGem
     call({"TOKEN" => token, "METHOD" => "GetExpressCheckoutDetails"})
   end
 
-  def self.do(token, payer_id, amount, currency)
+  def self.do(token, payer_id, amount, currency="EUR")
     ret = call({
                    "TOKEN"=>token,
                    "PAYERID"=>payer_id,
