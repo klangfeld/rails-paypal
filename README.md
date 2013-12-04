@@ -8,7 +8,7 @@ Install
 -------
 Since this is pre-alpha right now, I did not updage the builded gem, so just add it your Gemfile and point to github here.
 
-    gem 'rails-paypal', :git => 'git://github.com/aliciatang/rails-paypal.git'
+    gem 'rails-paypal', :git => 'git@github.com:mediatainment/rails-paypal.git'
     bundle update
 
 Call Paypal
