@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class RailsPaypalTest < Test::Unit::TestCase
+class RailsPaypalGemTest < Test::Unit::TestCase
 	def test_call_success
-		rp = RailsPaypal.call({
+		rp = RailsPaypalGem.call({
 			:METHOD => 'SetExpressCheckout', 
             :PAYMENTREQUEST_0_AMT=>'300.0',
             :PAYMENTREQUEST_0_PAYMENTACTION => 'Sale',
@@ -11,7 +11,7 @@ class RailsPaypalTest < Test::Unit::TestCase
 		assert_equal "Success", rp["ACK"]
 	end
 	def test_call_fail
-		rp = RailsPaypal.call({
+		rp = RailsPaypalGem.call({
 			:METHOD => 'SetExpressCheckout', 
             :PAYMENTREQUEST_0_AMT=>'300.0',
             :PAYMENTREQUEST_0_PAYMENTACTION => 'Sale',

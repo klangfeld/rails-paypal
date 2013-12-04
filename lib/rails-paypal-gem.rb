@@ -1,5 +1,5 @@
 require 'httparty'
-require 'rails-paypal/nvp-parser'
+require 'rails-paypal-gem/nvp-parser'
 class RailsPaypalGem
   include HTTParty
   if Rails.env == "development"

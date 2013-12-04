@@ -1,5 +1,5 @@
 dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
-require File.join(dir, 'rails-paypal')
+require File.join(dir, 'rails-paypal-gem')
 @data =  {
   :METHOD => 'SetExpressCheckout', 
   :PAYMENTREQUEST_0_AMT=>'300.0',
@@ -13,4 +13,4 @@ require File.join(dir, 'rails-paypal')
   :L_PAYMENTREQUEST_0_AMT1=>'50.0'
 }
 
-RailsPaypal.call(@data)
+RailsPaypalGem.call(@data)

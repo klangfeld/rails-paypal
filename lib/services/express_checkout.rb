@@ -1,4 +1,4 @@
-class RailsPaypal::ExpressCheckout < RailsPaypal
+class RailsPaypalGem::ExpressCheckout < RailsPaypalGem
   attr_accessor :params
   attr_accessor :token
   attr_accessor :line_items

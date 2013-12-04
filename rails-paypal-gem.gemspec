@@ -2,7 +2,7 @@
 require File.expand_path("../lib/rails-paypal/version", __FILE__)
 Gem::Specification.new do |s|
   s.name        = 'rails-paypal-gem'
-  s.version     =  RailsPaypal::VERSION
+  s.version     =  RailsPaypalGem::VERSION
   s.date        = '2013-06-11'
   
   s.summary     = "Paypal for rails"
