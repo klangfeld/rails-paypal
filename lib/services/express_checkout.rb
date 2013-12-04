@@ -17,8 +17,8 @@ class RailsPaypalGem::ExpressCheckout < RailsPaypalGem
     params["PAYMENTREQUEST_0_AMT"] = total.to_s
   end
 
-  def set(action = 'Sale')
-    self.params["PAYMENTREQUEST_0_CURRENCYCODE"] = "EUR"
+  def set(action = 'Sale', currency = 'USD')
+    self.params["PAYMENTREQUEST_0_CURRENCYCODE"] = currency
     self.params["PAYMENTREQUEST_0_PAYMENTACTION"] = action
     self.params["METHOD"] = 'SetExpressCheckout'
     response = self.class.call(self.params)
