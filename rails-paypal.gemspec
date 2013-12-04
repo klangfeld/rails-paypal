@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{lib}/**/*.rb", "bin/*", "LICENSE", "*.md"]
 
   s.homepage    =
-    'https://github.com/mediatainment/rails-paypal'
+    'https://github.com/mediatainment/rails-paypal-gem'
 
   s.extra_rdoc_files = ['README.md']
   
