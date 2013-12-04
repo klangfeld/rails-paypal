@@ -1,6 +1,6 @@
 require 'httparty'
 require 'rails-paypal/nvp-parser'
-class RailsPaypal
+class RailsPaypalGem
   include HTTParty
   if Rails.env == "development"
     base_uri "https://api-3t.sandbox.paypal.com/nvp"
