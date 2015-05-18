@@ -35,7 +35,7 @@ class RailsPaypalGem::ExpressCheckout < RailsPaypalGem
 
   def redirect_url
     set if self.token.nil?
-    if Rails.env == "development"
+    if Rails.env == "development" || Rails.env == "staging"
       "https://www.sandbox.paypal.com/webscr?cmd=_express-checkout&token=" + self.token
     elsif Rails.env == "production"
       "https://www.paypal.com/webscr?cmd=_express-checkout&token=" + self.token
